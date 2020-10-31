@@ -136,6 +136,10 @@ This web app uses Flask which is a  micro web framework written in Python. It is
 
 <p align="center"><img src="Flask_Web_Images/flaskapp1.PNG" width="640"\></p>
 
+### Preview Of Web-App
+
+https://mageshsundarg.github.io/Web_App_LPRS/
+
 ### Requirements for Web 
 ```bash
 flask
