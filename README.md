@@ -216,6 +216,7 @@ These routes are used to access their feautures.
 /video-ai
 /live-detection
 ```
+<p align="center"><img src="Flask_Web_Images/flaskapp1.png" width="640"\></p>
 
 ## Running the Flask App 
 Now you can run a Flask application in order to get detections through REST endpoints.
