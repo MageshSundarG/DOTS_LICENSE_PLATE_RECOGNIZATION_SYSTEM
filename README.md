@@ -195,7 +195,7 @@ And our schema looks like this.
    Maker Model:string
 }
 ```
-
+<p align="center"><img src="2.jpeg" width="640"\></p>
 ### Flask-Mail
 We use flask mail to send the data directly to the client's mail address.
 In this project, we used the gmail as mail server.
@@ -221,6 +221,7 @@ These routes are used to access their feautures.
 Now you can run a Flask application in order to get detections through REST endpoints.
 Initialize and run the Flask app on port 5000 of your local machine by running the following command from the root directory of this repo in a command prompt or shell.
 Because we are using mongo db atlas it takes a few seconds to connect to the cloud service and then it will start.
+<p align="center"><img src="1.jpeg" width="640"\></p>
 
 ```bash
 python app.py
