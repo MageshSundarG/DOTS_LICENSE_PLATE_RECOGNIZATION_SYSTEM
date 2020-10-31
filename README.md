@@ -4,7 +4,11 @@
 Yolov4 Object Detection with Flask and Tensorflow 2.0
 Yolov4 is an algorithm that uses deep convolutional neural networks to perform object detection. This repository implements Yolov4 using TensorFlow 2.0 for license plate detection and then, the lisence plate characters are recognised using tesseract 5 OCR and it is implemented in web application. <br>
 
-This custom AI model is trained using a dataSet consisting of over 6000 images continuously on a GPU machine for 3 days. Then we got a accuracy of IOU average more than 0.91 which is more than 91%.  
+This custom AI model is trained using a dataSet consisting of over 6000 images continuously on a GPU machine for 3 days. Then we got a accuracy of IOU average more than 0.91 which is more than 91%.
+
+### Preview Of Web-App
+
+https://mageshsundarg.github.io/Web_App_LPRS/
 
 
 ## Getting started
@@ -136,9 +140,7 @@ This web app uses Flask which is a  micro web framework written in Python. It is
 
 <p align="center"><img src="Flask_Web_Images/flaskapp1.PNG" width="640"\></p>
 
-### Preview Of Web-App
 
-https://mageshsundarg.github.io/Web_App_LPRS/
 
 ### Requirements for Web 
 ```bash
