@@ -58,6 +58,7 @@ Try it out on this image in the repository!
 # Run License Plate Recognition
 python detect.py --weights ./checkpoints/custom-416 --size 416 --model yolov4 --images ./data/images/car2.jpg --plate
 ```
+<p align="center"><img src="Flask_Web_Images/flaskapp3.PNG" width="640"\></p>
 
 ### Resulting Image Example
 The output from the above command should print any license plate numbers found to your command terminal as well as output and save the following image to the `detections` folder.
@@ -133,6 +134,8 @@ Shri HariPriya has created the templates and the frontend
 ### Flask web app
 This web app uses Flask which is a  micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.
 
+<p align="center"><img src="Flask_Web_Images/flaskapp1.PNG" width="640"\></p>
+
 ### Requirements for Web 
 ```bash
 flask
@@ -149,6 +152,8 @@ MongoDB is a cross-platform document-oriented database program. Classified as a 
 dnspython is a DNS toolkit for Python.dnspython provides both high and low level access to DNS.
 
 The Flask-Mail extension provides a simple interface to set up SMTP with your Flask application and to send messages from your views and scripts.
+
+<p align="center"><img src="Flask_Web_Images/flaskapp4.PNG" width="640"\></p>
 
 
 ### Configuration
@@ -196,6 +201,7 @@ And our schema looks like this.
 }
 ```
 <p align="center"><img src="2.jpeg" width="640"\></p>
+
 ### Flask-Mail
 We use flask mail to send the data directly to the client's mail address.
 In this project, we used the gmail as mail server.
@@ -206,7 +212,7 @@ And you're good to go.
 ```
 MAIL_SERVER='smtp.gmail.com'
 ```
-
+<p align="center"><img src="Flask_Web_Images/flaskapp8.PNG" width="640"\></p>
 
 
 ### Detections Routes
@@ -216,12 +222,19 @@ These routes are used to access their feautures.
 /video-ai
 /live-detection
 ```
-<p align="center"><img src="Flask_Web_Images/flaskapp1.PNG" width="640"\></p>
+### Result from Image
+
+<p align="center"><img src="Flask_Web_Images/flaskapp6.PNG" width="640"\></p>
+
+### Result from Video
+
+<p align="center"><img src="Flask_Web_Images/flaskapp7.PNG" width="640"\></p>
 
 ## Running the Flask App 
 Now you can run a Flask application in order to get detections through REST endpoints.
 Initialize and run the Flask app on port 5000 of your local machine by running the following command from the root directory of this repo in a command prompt or shell.
 Because we are using mongo db atlas it takes a few seconds to connect to the cloud service and then it will start.
+
 <p align="center"><img src="1.jpeg" width="640"\></p>
 
 ```bash
