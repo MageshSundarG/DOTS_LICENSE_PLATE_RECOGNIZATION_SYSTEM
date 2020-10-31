@@ -7,7 +7,7 @@ from werkzeug.exceptions import HTTPException
 from pathlib import Path
 import pymongo
 from config.default import *
-#from webai import detect_image
+from web import detect_image
 
 
 #Constants
@@ -71,12 +71,8 @@ def get_image():
 
 @app.route('/image-result/<filename>/<email>',methods=["GET","POST"])
 def uploaded_image(filename,email):
-    first=filename.split(".")[0]
-    nametxt=first+".txt"
-    filep=Path("./static/lidata/"+nametxt)
-    with open(filep,"r") as f:
-        licensenum=f.read()
-    #licensenum="TN0600000"#detect_image(os.path.join(app.config['UPLOAD-FOLDER'],filename))
+
+    licensenum=detect_image(os.path.join(app.config['UPLOAD-FOLDER'],filename))
     print("hello",email)
     if licensenum:
         delete_file(filename)
@@ -118,7 +114,7 @@ def get_video():
 
 @app.route('/video-result/<filename>')
 def uploaded_video(filename):
-    licensesnumlist=["TN0600000","MH20TC830C"]#detect_video(os.path.join(app.config['UPLOAD-FOLDER'],filename))
+    licensesnumlist=detect_video(os.path.join(app.config['UPLOAD-FOLDER'],filename))
 
     if licensesnumlist:
         delete_file(filename)
