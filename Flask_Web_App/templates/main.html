@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <title>{%block title %}{%endblock%}</title>
+    {%block head%}{%endblock%}
+  </head>
+  <body>
+    <div class="ui top fixed menu" style="margin-bottom:25px;">
+      <a class="active item" href='/'>
+        <i class="home icon" style="color:crimson;"></i>Home 
+      </a>
+      <div class="right menu">
+        <a class="item" href='/image-ai'>
+          Image
+        </a>
+        <a class="item" href='/video-ai'>
+          Video
+        </a>
+      </div>
+    </div>
+    
+      {% for message in get_flashed_messages() %}
+      <div class="flash ui red message" style="margin-top:3%;">{{ message }}</div>
+      {% endfor %}
+    
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div class="ui segment" style="border:none;margin-bottom: 10%;"></div>
+    <div id="footer">
+      <div class="ui inverted bottom fixed menu">
+        <div class="right menu">
+          {% block footer %} <h4 style="color: dodgerblue;">Copyright 2020 by you. All rights reserved.</h6> {% endblock %}
+        </div>
+      </div>
+    </div>
+    <script>
+        let alerts=document.querySelectorAll(".flash");
+        alerts.forEach(alert => {
+          setTimeout(() => {
+            alert.parentNode.removeChild(alert);
+          }, 3000);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+{%extends "main.html" %}
+{%block title%}Home{%endblock%}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+
+<div id="textoverimage" style="position: absolute;top:8%;left:20%;right:20%;z-index: 10;color:deeppink;opacity:0.5">
+  <div class="ui main text container segment">
+    <h1>This is the <strong>Best</strong> Ai for license detection.</h1>
+    <h4>Imagera is a Artificial Intelligence tool to find the licence plate from the image/video</h4>
+    <a class="ui primary basic button" href="#trios">See More</a>
+  </div>
+</div>
+<img src="https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="ui fluid image" alt="Responsive image">
+<div id="trios" style="margin-top:10%;">
+  <div class="ui main text container segment">
+  <div class="ui grid">
+    <div class="three column row">
+      <div class="column">
+        <div class="ui teal card">
+          <img src="https://images.unsplash.com/photo-1516086511662-1bfcf218f4c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="ui medium rounded image" alt="image">
+          <div class="content">
+            <div class="header" >Image upload</div>
+            <div class="meta">
+              <p>Upload a image to identify the vehicle</p>
+            </div>
+            <a class="right floated teal basic button" href="/image-ai">Upload</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="ui purple card">
+          <img src="https://images.unsplash.com/photo-1482776518305-36e7f79f253d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="ui medium rounded image" alt="image">
+          <div class="content">
+            <div class="header" >Video upload</div>
+            <div class="meta">
+              <p>Upload a video to identify the vehicles</p>
+            </div>
+            <a class="right floated teal basic button" href="/video-ai">Upload</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="ui pink card">
+          <img src="https://images.unsplash.com/photo-1415594445260-63e18261587e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="ui medium rounded image" alt="image">
+          <div class="content">
+            <div class="header" >Live data</div>
+            <div class="meta">
+              <p>Live detection from traffic camera</p>
+            </div>
+            <a class="right floated pink basic button" href="/live-detection">See More</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+</div>
+
+{% endblock %}

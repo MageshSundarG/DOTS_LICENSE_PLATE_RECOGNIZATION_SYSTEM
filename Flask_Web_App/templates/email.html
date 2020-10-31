@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <title>Email</title>
+  </head>
+  <body>
+    <div class="ui main text container segment" style="margin-top: 5%;">
+        <h2 class="ui header">Result From {{filename}}</h2>
+        <div class="ui blue raised segment">
+            <div class="ui unstackable items">
+                <div class="item">
+                  <div class="image">
+                    {%if license["isstolen"] %}
+                        <div style="color:crimson"><i class="times circle icon"></i><h2>Blacklisted</h2></div>
+                        
+                    {%else%}
+                        <div style="color: limegreen;"><i class="check icon"></i><h2>Safe</h2></div>
+                    {%endif%}
+                  </div>
+                  <div class="content">
+                    <a class="header" ><h1>License Info</h1></a>
+                    <div class="meta">
+                      <span style="color:darkgray">Description</span>
+                    </div>
+                    <div class="description">
+                      <p>
+                        <h4 style="color: lightseagreen;">Registration Number: <span style="color: royalblue;">{{license["Registration No"]}}</span></h4>
+                        <h4 style="color: lightseagreen;">Registration date: <span style="color: royalblue;">{{license["Registration Date"]}}</span></h4>
+                        <h4 style="color: lightseagreen;">Vehicle: <span style="color: royalblue;">{{license["Maker Model"]}}</span></h4> 
+                        <h4 style="color: lightseagreen;">Owner Name: <span style="color: royalblue;">{{license["Owner Name"]}}</span></h4>
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+  </body>
+</html>

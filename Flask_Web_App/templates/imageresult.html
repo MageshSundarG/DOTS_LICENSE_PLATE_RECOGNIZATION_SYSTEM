@@ -1,0 +1,40 @@
+{%extends "main.html" %}
+{%block title%}Image Result{%endblock%}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="ui main text container segment" style="margin-top: 5%;">
+    <h2 class="ui header">Result From {{filename}}</h2>
+    <div class="ui blue raised segment">
+        <div class="ui unstackable items">
+            <div class="item">
+              <div class="image">
+                {%if license["isstolen"] %}
+                    <div style="color:crimson"><i class="times circle icon"></i>Blacklisted</div>
+                    
+                {%else%}
+                    <div style="color: limegreen;"><i class="check icon"></i>Safe</div>
+                {%endif%}
+              </div>
+              <div class="content">
+                <a class="header">License Info</a>
+                <div class="meta">
+                  <span>Description</span>
+                </div>
+                <div class="description">
+                  <p>
+                    Registration Number:{{license["Registration No"]}} <br>
+                    Registration date:{{license["Registration Date"]}} <br>
+                    Vehicle:{{license["Maker Model"]}} <br>
+                    Owner Name:{{license["Owner Name"]}}
+                  </p>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+{%endblock%}

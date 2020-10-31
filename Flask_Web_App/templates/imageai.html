@@ -1,0 +1,25 @@
+{%extends "main.html" %}
+{%block title%}Image AI{%endblock%}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+
+<div class="ui main text  container blue segment" style="margin-top: 5%;">
+<h1>Image AI</h1>
+<form method=post enctype=multipart/form-data>
+    <div class="ui big form">
+        <div class="field">
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="field">
+            <label>Upload Image</label>
+            <input type=file name=file>
+        </div>
+        <input type=submit class="ui blue button" value=Upload>
+    </div>
+</form>
+</div>
+
+{%endblock%}

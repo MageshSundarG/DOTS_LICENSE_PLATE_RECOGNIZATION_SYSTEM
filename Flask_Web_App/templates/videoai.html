@@ -1,0 +1,22 @@
+{%extends "main.html" %}
+{%block title%}Video AI{%endblock%}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="ui main text container blue segment" style="margin-top: 5%;">
+    <h1>Video AI</h1>
+    <form method=post enctype=multipart/form-data>
+        <div class="ui big form">
+            <div class="field">
+                <label>Upload Video</label>
+                <input type=file name=file>
+            </div>
+            <input type=submit class="ui blue button" value=Upload>
+        </div>
+    </form>
+    </div>
+
+
+{%endblock%}

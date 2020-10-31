@@ -1,0 +1,42 @@
+{%extends "main.html" %}
+{%block title%}Video Result{%endblock%}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="ui main text container segment" style="margin-top: 5%;">
+    <h2 class="ui header">Result From {{filename}}</h2>
+    <table class="ui green table">
+        <thead>
+          <tr>
+            <th>Reg No</th>
+            <th>Reg Date</th>
+            <th>Vehicle</th>
+            <th>Owner</th>
+            <th><i class="thumbs up icon"></i>verification</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for license in licenses %}
+                <tr>
+                   <td>{{license["Registration No"]}}</td>
+                   <td>{{license["Registration Date"]}}</td>
+                   <td>{{license["Maker Model"]}}</td>
+                   <td>{{license["Owner Name"]}}</td>
+                   <td>
+                    {%if license["isstolen"] %}
+                        <div style="color:crimson;"><i class="times circle icon"></i>Blacklisted</div>
+                        
+                    {%else%}
+                        <div style="color: lawngreen;"><i class="check icon"></i>Safe</div>
+                        
+                    {%endif%}
+                   </td>
+                </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+</div>
+
+{%endblock%}

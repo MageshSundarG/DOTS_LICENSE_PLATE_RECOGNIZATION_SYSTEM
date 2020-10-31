@@ -1,0 +1,55 @@
+#tech body {
+  font-family: sans-serif;
+  background: #657B83;
+}
+#tech h1 {
+  text-align: center;
+  color: rgba(#000, 0.4);
+}
+.stack {
+  padding: 110px 0 0;
+  color: #657B83;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+  float: left;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(#000,0.5);
+}
+
+.label {
+  display: block;
+  padding: 2.5em 0 1.5em;
+  font-size: 1.5rem;
+  color: rgba(#fff, 0.9);
+  font-weight: bold;
+  transform:rotate(5deg);
+
+  &-bg {
+      transform:rotate(-5deg);
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      right: -30px;
+    &.js {
+      background: #FCBA00;
+    }
+    &.css {
+      background: #0E8BFF;
+    }
+    &.build {
+      background: #A4CF47;
+    }
+  }
+}
+
+.tech {
+  padding: 1em;
+  background-color: rgba(#fff, 0.5);
+  color: rgba(#000,0.5);
+  border-bottom: 1px solid #eee;
+  font-size: 1.2rem;
+  margin:0;
+}
